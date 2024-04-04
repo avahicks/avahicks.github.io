@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Ava Hicks-->
+<title>Final Project:Music!</title>
+<meta charset="utf-8">
+
+<link rel = "stylesheet" href = "Project-1.css">
+
+<style>
+em{color:hotpink; text-decoration:underline }
+h2{text-align:left}
+</style>
+
+<script>
+function blastoff(apple,cherry){
+document.getElementById("blanket").src=apple;
+document.getElementById("pillow").innerHTML=cherry;
+}
+
+function chicken (pan){
+document.getElementById("baseball").innerHTML=pan;
+}
+
+function knee (light){
+document.getElementById("cheese").innerHTML=light;
+}
+
+var Name = prompt("Please enter a well-known album name");
+
+var totalpoints=0;
+
+for (i=1; i<4; i=i+1)
+{
+grade=prompt("For " + Name + ", please rate the album out of 10");
+totalpoints=totalpoints+parseFloat(grade);
+}
+alert("The average rating for this album is " + totalpoints/3);
+document.write("<h2>" + Name + " is rated as <em>" + totalpoints/3 + "</em><h2>")
+
+
+</script>
+
+</head>
+
+<body>
+<h1 id="baseball" class="peas" onclick="chicken('There are a lot of reasons...')"> Music! How and Why it Affects Us </h1>
+
+<h4 class="tiger"> Navigation </h4>
+
+<ul>
+<li><a href="A_Project-1.html"> Home Page</a></li>
+<li><a href="C_Project.html">Quiz!</a></li>
+</ul>
+
+<h2> Why do we think that some songs are happy and others as sad? </h2>
+
+<h3> Lyrics tell a story </h3>
+
+<p> One of my favorite albums to listen to in order is "Lemonade" by Beyonce because of the amazing story telling. The album serves as a journal, logging the stages of grief she experienced when she realized her husband was having an affair. The album begins very slowly, the first track being "Pray You Catch Me" where she sings that she has found out about her husbands extramarital affair. The lyrics paint a bitter picture of Beyonce listening to her husbands dishonesty. The album then progresses with "Hold Up", "Don't Hurt Yourself", and "Sorry", where she tells us about the anger she felt when the affair came to light. In the songs, she is directly speaking to her husband saying, "It's such a shame you let this good love go to waste", "I know you're lying, I'm not broken, I'm not crying", and "I ain't sorry". The album culminates with "All Night" where she details her process of forgiveness singing, "Found the truth beneath your lies, and true love never has to hide". The explicit story telling in this album is part of the reason listeners feel sad, angry, and happy as they follow her story.</p>
+
+<br><br>
+
+<h3> But there's more to music than the words </h3>
+
+<p> If you've ever been to a symphony, or heard a piece written in a foreign language, chances are you still felt moved by the music even though you could not understand the lyrics (or lack thereof). This is because the tempo of the music has an effect on an area of our brain called the superior temporal gyrus, or STG. The STG, which makes up a part of our temporal lobe, contributes to our ability to process auditory signals and stimulation. A study was conducted to examine the differences in the activity of this area of the brain when subjects listened to fast paced music vs slow paced music. Using an fMRI, researchers found that activity in the bilateral STG was stronger for fast paced music. This result supports the idea that faster tempos in happy music help arouse more positive emotions. </p>
+<br><br>
+
+<h3> We associate music with our own memories!</h3>
+
+<p> Have you ever been listening to a playlist on shuffle and a song plays that brings back a vivid memory? This is a phenomenon know as music-evoked autobiographical memory and it is a big reason why some songs evoke strong emotions in us. Listening to music activates the entire limbic system, which, coincidentally, is involved with emotional processing and memory control. This means that certain songs can become associated with memories and the emotions experienced while that memory was being formed. For example, say you are driving to the beach with your friends and a song comes on that you know. Since you are in a good mood, you subconsciously associate the song with this specific moment in time and the happy emotion you feel. When you hear the song again, even if you are studying or working out or getting ready for the day, you can picture the exact moment in your head and may start to feel happier. There could be some positive applications for this phenomenon, as using music therapeutically is something that is being researched more frequently. The downside of this effect; however, is that a song associated with a negative memory can bring back those same emotions, so be careful when you put a playlist on shuffle!
+<br><br>
+
+<h3> It also depends on our culture</h3>
+
+<p> It is important to remember that not everyone associates the same tempo, notes, or lyrics with the same emotion. In Western cultures, we have learned to associate specific harmonies or strings of notes with positive or negative emotions. This can differ greatly from the notes and harmonies Eastern cultures associate with the same emotions. What someone from the United States would classify as "happy music" might be identified as "unsettling" or "sad" by someone from India and vice versa. This phenomenon was exemplified when the Beatles released "Sgt. Pepper's Lonely Hearts Club Band". One of the songs from the album, "Within You, Without You", is heavily influenced by traditional Indian music and upon its release, many people accustomed to exclusively Western music found the song "odd" or "hard to hum or dance to". With time; however, it became one of the most enjoyed and influential songs on the album because it changed the way many Western people interpreted the combination of musical notes.
+
+
+<h4 id="pillow" onclick="blastoff('Project_Images/cntrl.jpg','CTRL by SZA!')"> My favorite album... </h4>
+
+<img src="Project_Images/qm.jpg" id="blanket" alt="mystery">
+<br><br><br>
+
+What's your favorite genre?<form name="blues">
+<input type="text" name="favsong">
+<input type="button" value="enter" onclick="document.blues.favsong.value='I like ' + document.blues.favsong.value + ' too!'";>
+</form>
+
+<h4 id="cheese" onclick="knee('Works Cited')"> References </h4>
+
+<a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6243583/">Effects of Musical Tempo on Musicians’ and Non-musicians’ Emotional Experience When Listening to Music</a>
+
+<br><br>
+
+<a target="_blank" href="https://www.sciencedirect.com/topics/neuroscience/superior-temporal-gyrus">Superior Temporal Gyrus</a>
+
+<br><br>
+
+<a target="_blank" href="https://www.levinemusic.org/about/news/the-neuroscience-of-music/?gad_source=1&gclid=CjwKCAjw_LOwBhBFEiwAmSEQAb1vcOB-yAoe2hSyd-N7OATJxxkaxY5Fq4r9NfnRjLoUPgFGBz0ysBoCFc8QAvD_BwE"> The Neuroscience of Music</a>
+
+<br><br>
+
+<a target="_blank" href="https://www.durham.ac.uk/research/current/thought-leadership/2023/03/why-does-music-bring-back-memories-what-the-science-says/">Why does music bring back memories? What the science says</a>
+
+<br><br>
+
+<a target="_blank" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0251692">What makes music memorable? Relationships between acoustic musical features and music-evoked emotions and memories in older adults</a>
+
+<br><br>
+
+<a target="_blank" href="https://jbiol.biomedcentral.com/articles/10.1186/jbiol82"> Music, Memory and emotion</a>
+
+<br><br>
+
+<a target="_blank" href="https://www.beatlesbible.com/songs/within-you-without-you/"> Within You Without You</a>
+
+<br><br>
+
+<a target="_blank" href="https://abcnews.go.com/Entertainment/complete-breakdown-beyonces-album-lemonade-track/story?id=38632970">A Complete Breakdown of Beyonce's Album 'Lemonade' by Track</a>
+
+<br><br>
+
+<a target="_blank" href="https://www.youtube.com/watch?source_ve_path=MzY4NDIsMjg2NjQsMTY0NTAz&feature=emb_share&v=kzFgoaZ9-VQ">Emotional Responses to Music</a>
+
+<br><br>
+
+<a target="_blank" href="http://www.javascriptkit.com/script/script2/backdisco.shtml">Disco JavaScript Effect</a>
+
+<br><br>
+
+<a target="_balnk" href="https://youtu.be/H8ebSUD8OeM">Video Recording</a>
+
+</body>
+
+</html>

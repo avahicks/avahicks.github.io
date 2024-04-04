@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--Ava Hicks-->
+<title>Final Project:Music!</title>
+<meta charset="utf-8">
+
+<link rel = "stylesheet" href = "Project-1.css">
+
+<script>
+
+r=255;
+g=255;
+b=255;
+flag=0;
+t=new Array;
+o=new Array;
+d=new Array;
+
+function hex(a,c)
+{
+t[a]=Math.floor(c/16)
+o[a]=c%16
+switch (t[a])
+{
+case 10:
+t[a]='A';
+break;
+case 11:
+t[a]='B';
+break;
+case 12:
+t[a]='C';
+break;
+case 13:
+t[a]='D';
+break;
+case 14:
+t[a]='E';
+break;
+case 15:
+t[a]='F';
+break;
+default:
+break;
+}
+switch (o[a])
+{
+case 10:
+o[a]='A';
+break;
+case 11:
+o[a]='B';
+break;
+case 12:
+o[a]='C';
+break;
+case 13:
+o[a]='D';
+break;
+case 14:
+o[a]='E';
+break;
+case 15:
+o[a]='F';
+break;
+default:
+break;
+}
+}
+
+function ran(a,c)
+{
+if ((Math.random()>2/3||c==0)&&c<255)
+{
+c++
+d[a]=2;
+}
+else
+{
+if ((Math.random()<=1/2||c==255)&&c>0)
+{
+c--
+d[a]=1;
+}
+else d[a]=0;
+}
+return c
+}
+function do_it(a,c)
+{
+if ((d[a]==2&&c<255)||c==0)
+{
+c++
+d[a]=2
+}
+else
+if ((d[a]==1&&c>0)||c==255)
+{
+c--;
+d[a]=1;
+}
+if (a==3)
+{
+if (d[1]==0&&d[2]==0&&d[3]==0)
+flag=1
+}
+return c
+}
+function disco()
+{
+if (flag==0)
+{
+r=ran(1, r);
+g=ran(2, g);
+b=ran(3, b);
+hex(1,r)
+hex(2,g)
+hex(3,b)
+document.body.style.background="#"+t[1]+o[1]+t[2]+o[2]+t[3]+o[3]
+flag=50
+}
+else
+{
+r=do_it(1, r)
+g=do_it(2,g)
+b=do_it(3,b)
+hex(1,r)
+hex(2,g)
+hex(3,b)
+document.body.style.background="#"+t[1]+o[1]+t[2]+o[2]+t[3]+o[3]
+flag--
+}
+
+setTimeout('disco()',50)
+}
+
+
+
+var timer_on;
+
+function changeImage (lion){
+document.getElementById("main").src=lion.src;
+document.getElementById("caption").innerHTML=lion.alt;}
+
+
+function startSlideshow (green){
+if (timer_on==false)
+{return}
+
+panther = document.getElementById ("note" + green);
+
+changeImage (panther);
+
+new_green = green + 1;
+
+if(new_green > 10)
+{new_green = 1}
+
+setTimeout ("startSlideshow(new_green)", 2000)
+}
+
+</script>
+
+</head>
+
+<body>
+
+<body onload="disco()">
+
+<h1 class="peas"> Music! How and Why it Affects Us </h1>
+
+<h4 class="tiger"> Navigation </h4>
+
+<ul>
+<li><a href="B_Project.html">The Science Behind it!</a></li>
+<li><a href="C_Project.html">Quiz!</a></li>
+</ul>
+
+<h4> Lets's do a test</h4>
+<p>Which song do you perceive as happy and which do you perceive as sad?</p>
+<br>
+
+<!-- Music clips embedded using spotify link because of copy right issues with mp3 files, I didn't want to accidentally illegally download the file-->
+
+<iframe width="300" height="200" style="border-radius:12px" src="https://open.spotify.com/embed/track/6lrQo6KAYvb92MGk6ZuZlt?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<br>
+
+<iframe width="300" height="200" style="border-radius:12px" src="https://open.spotify.com/embed/track/62PaSfnXSMyLshYJrlTuL3?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+<h2> Let's calculate the beats per minute</h2>
+
+<h4>For "Say You Love Me"...</h4>
+
+The song has a total of 543.4 beats, type that number <input type="text" id="dog"><br>
+
+The song is 3.8 minutes long, type that number<input type="text" id="cat"><br>
+
+This gives the song a tempo of <input type="text" id="out"> BPM<br>
+
+<input type="button" value="solve" onclick="document.getElementById('out').value=parseFloat(document.getElementById('dog').value) / parseFloat(document.getElementById('cat').value)">
+
+<br><br>
+
+<h4>For "Hello"...</h4>
+
+The song has a total of 389.47 beats, type that number <input type="text" id="horse"><br>
+
+The song is 4.93 minutes long, type that number<input type="text" id="cow"><br>
+
+This gives the song a tempo of <input type="text" id="moo"> BPM<br>
+
+<input type="button" value="solve" onclick="document.getElementById('moo').value=parseFloat(document.getElementById('horse').value) / parseFloat(document.getElementById('cow').value)">
+
+<table class="red">
+<tr>
+<th colspan="10">The Most Popular Albums of 2023</th>
+</tr>
+
+<tr>
+<td>
+<img id="note1" src="Project_Images/morganwallen.jpg" alt="One Thing at a Time- Morgan Wallen"
+width="30" height="30" onclick="timer_on=false; changeImage(this)">
+</td>
+
+<td>
+<img id="note2" src="Project_Images/midnights.jpg" alt="Midnights- Taylor Swift"
+width="30" height="30" onclick="timer_on=false; changeImage(this)">
+</td>
+
+<td>
+<img id="note3" src="Project_Images/sos.jpg" alt="SOS- SZA"
+width="30" height="30" onclick="timer_on=false; changeImage(this)">
+</td>
+
+<td>
+<img id="note4" src="Project_Images/1989.jpg" alt="1989 (Taylor's Version)- Taylor Swift"
+width="30" height="30" onclick="timer_on=false; changeImage(this)">
+</td>
+
+<td>
+<img id="note5" src="Project_Images/dangerous.jpg" alt="Dangerous: The Double Album- Morgan Wallen"
+width="30" height="30" onclick="timer_on=false; changeImage(this)">
+</td>
+
+<td>
+<img id="note6" src="Project_Images/lover.jpg" alt="Lover- Taylor Swift"
+width="30" height="30" onclick="timer_on=false; changeImage(this)">
+</td>
+
+<td>
+<img id="note7" src="Project_Images/utopia.jpg" alt="Utopia- Travis Scott"
+width="30" height="30" onclick="timer_on=false; changeImage(this)">
+</td>
+
+<td>
+<img id="note8" src="Project_Images/speaknow.jpg" alt="Speak Now (Taylor's Version)- Taylor Swift"
+width="30" height="30" onclick="timer_on=false; changeImage(this)">
+</td>
+
+<td>
+<img id="note9" src="Project_Images/folklore.jpg" alt="folklore- Taylor Swift"
+width="30" height="30" onclick="timer_on=false; changeImage(this)">
+</td>
+
+<td>
+<img id="note10" src="Project_Images/heroes2.jpg" alt="Heroes & Villans- Metro Boomin"
+width="30" height="30" onclick="timer_on=false; changeImage(this)">
+</td>
+
+</tr>
+
+<tr>
+<td colspan="10"> <img src="Project_Images/music.jpg" alt="cassette tapes" 
+width="335" height="335" id="main"</td>
+
+</tr>
+
+<tr>
+<th colspan="10" id="caption">  </th>
+</tr>
+
+<tr>
+<td colspan="10"><input class="camel" type="button" value="Play" onclick="timer_on=true; startSlideshow(1)">
+</td>
+</tr>
+
+<tr>
+<td colspan="10"><input class="camel" type="button" value="Pause" onclick="timer_on=false">
+</td>
+</tr>
+
+</table>
+
+<!--Video Code embedded from youtube option since the option to download the video was blocked by a youtube premium subsciption-->
+
+<iframe class="pink" width="560" height="315" src="https://www.youtube.com/embed/kzFgoaZ9-VQ?si=1Wme-Iva1LZmcRdS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+
+
+
+</body>
+
+</html>
